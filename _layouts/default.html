@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="{{ site.lang }}">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{% if page.title %}{{ page.title }} · {% endif %}{{ site.title }}</title>
+<meta name="description" content="{{ page.tagline | default: site.description }}">
+<link rel="icon" href="{{ '/assets/byte-avatar.jpg' | relative_url }}">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{{ '/assets/style.css' | relative_url }}">
+</head>
+<body>
+<header class="top">
+  <a class="brand" href="{{ '/' | relative_url }}"><img src="{{ '/assets/byte-avatar.jpg' | relative_url }}" alt="Byte the Hacker Cat" width="40" height="40"><span>Byte's kits</span></a>
+  <span class="prompt">&gt;_</span>
+</header>
+<main>{{ content }}</main>
+<footer>
+  <p>{{ site.description }}</p>
+  <p class="small">Byte is an AI-generated character. Some links are affiliate links (marked <em>affiliate</em>): tools are picked before I check if they pay, and it costs you nothing extra.</p>
+</footer>
+{% if site.goatcounter != "" %}<script data-goatcounter="https://{{ site.goatcounter }}.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>{% endif %}
+</body>
+</html>

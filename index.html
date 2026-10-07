@@ -1,0 +1,13 @@
+---
+layout: default
+---
+<section class="hero">
+  <h1>Byte's kits</h1>
+  <p>{{ site.description }}</p>
+  <p class="small">Every video comes with its kit: the steps, the exact prompt, the link. Copy, paste, done.</p>
+</section>
+{% assign kits = site.kits | where_exp: "k", "k.published != false" | sort: "date" | reverse %}
+{% if kits.size == 0 %}<p class="empty">First kit coming soon. Byte is warming up his paws.</p>{% endif %}
+<ul class="list">
+{% for k in kits %}<li><a href="{{ k.url | relative_url }}"><span class="name">{{ k.title | escape }}</span><span class="tag">{{ k.tagline | escape }}</span><span class="date">{{ k.date | date: "%b %-d" }}</span></a></li>{% endfor %}
+</ul>

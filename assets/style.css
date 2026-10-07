@@ -1,0 +1,30 @@
+:root{--bg:#07090a;--panel:#0e1411;--line:#1d2a22;--text:#d8f5e0;--muted:#86a893;--neon:#39ff6a;--neon-dim:#1f8f3d}
+*{box-sizing:border-box}
+html{background:var(--bg)}
+body{margin:0 auto;max-width:720px;padding:0 16px 48px;color:var(--text);font:16px/1.6 "Space Mono",ui-monospace,monospace}
+a{color:var(--neon)}
+.top{display:flex;align-items:center;justify-content:space-between;padding:20px 0;border-bottom:1px solid var(--line)}
+.brand{display:flex;gap:10px;align-items:center;text-decoration:none;color:var(--text);font-weight:700}
+.brand img{border-radius:50%;border:1px solid var(--neon-dim)}
+.prompt{color:var(--neon);animation:blink 1.2s steps(1) infinite}
+@keyframes blink{50%{opacity:0}}
+h1,h2{font-family:Anton,Impact,sans-serif;font-weight:400;letter-spacing:.02em;line-height:1.1}
+h1{font-size:clamp(34px,8vw,52px);margin:28px 0 8px;color:#fff}
+h2{font-size:24px;margin:32px 0 10px;color:var(--neon)}
+.eyebrow,.small,.date,.tag{color:var(--muted);font-size:13px}
+.tagline{font-size:18px;color:var(--muted);margin-top:0}
+.cta{display:flex;flex-wrap:wrap;gap:10px;margin:20px 0}
+.btn{display:inline-block;padding:12px 18px;border:1px solid var(--neon);border-radius:8px;background:var(--neon);color:#031006;font-weight:700;text-decoration:none}
+.btn.alt{background:transparent;color:var(--neon)}
+.btn em{font-style:normal;font-size:11px;margin-left:6px;padding:1px 6px;border:1px solid currentColor;border-radius:4px}
+.steps{padding-left:22px}.steps li{margin:6px 0}
+.prompt-box{background:var(--panel);border:1px solid var(--line);border-left:3px solid var(--neon);border-radius:8px;padding:14px;white-space:pre-wrap;word-break:break-word;overflow-x:auto}
+.facts{padding-left:18px}
+.disclosure{margin-top:28px;padding:12px;border:1px dashed var(--neon-dim);border-radius:8px;color:var(--muted);font-size:13px}
+.hero{padding:12px 0 8px}
+.list{list-style:none;padding:0;margin:24px 0}
+.list a{display:grid;grid-template-columns:1fr auto;gap:2px 12px;padding:14px;border:1px solid var(--line);border-radius:10px;margin-bottom:10px;text-decoration:none;background:var(--panel)}
+.list a:hover{border-color:var(--neon-dim)}
+.list .name{color:#fff;font-weight:700}.list .tag{grid-column:1}.list .date{grid-row:1;grid-column:2}
+.empty{color:var(--muted)}
+footer{margin-top:48px;padding-top:16px;border-top:1px solid var(--line);color:var(--muted);font-size:13px}

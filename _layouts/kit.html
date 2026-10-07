@@ -1,0 +1,21 @@
+---
+layout: default
+---
+<article class="kit">
+  <p class="eyebrow">Episode · {{ page.date | date: "%b %-d, %Y" }}</p>
+  <h1>{{ page.title | escape }}</h1>
+  <p class="tagline">{{ page.tagline | escape }}</p>
+  <div class="cta">
+    <a class="btn" href="{{ page.lien_officiel }}" rel="noopener" data-goatcounter-click="out-{{ page.slug }}-officiel">Open {{ page.outil }}</a>
+    {% if page.lien_affilie and page.lien_affilie != "" %}<a class="btn alt" href="{{ page.lien_affilie }}" rel="sponsored noopener" data-goatcounter-click="out-{{ page.slug }}-affilie">{{ page.outil }} via my link <em>affiliate</em></a>{% endif %}
+  </div>
+  <h2>How to use it</h2>
+  <ol class="steps">{% for e in page.etapes %}<li>{{ e | escape }}</li>{% endfor %}</ol>
+  {% if page.prompt %}<h2>The prompt</h2>
+  <pre class="prompt-box"><code>{{ page.prompt | escape }}</code></pre>{% endif %}
+  {% if page.prix or page.limite %}<h2>Before you start</h2><ul class="facts">
+    {% if page.prix %}<li><b>Pricing:</b> {{ page.prix | escape }}</li>{% endif %}
+    {% if page.limite %}<li><b>Heads-up:</b> {{ page.limite | escape }}</li>{% endif %}
+  </ul>{% endif %}
+  {% if page.lien_affilie and page.lien_affilie != "" %}<p class="disclosure">Affiliate disclosure: if you subscribe through my link, I may earn a commission at no extra cost to you. {{ page.outil }} was picked before I checked whether it pays.</p>{% endif %}
+</article>

@@ -1,0 +1,17 @@
+# Byte's kits - site statique GitHub Pages (organisation arise-studio, depot byte-kits)
+# Chaque episode = un fichier _kits/<outil>.md ecrit par le pipeline n8n (front matter uniquement).
+title: "Byte's kits"
+description: "I only show AI tools that earn it. And exactly how to use them."
+url: "https://arise-studio.github.io"
+baseurl: "/byte-kits"
+lang: en
+# Code GoatCounter (sous-domaine <code>.goatcounter.com), vide = aucune mesure
+goatcounter: ""
+collections:
+  kits:
+    output: true
+    permalink: /:name/
+defaults:
+  - scope: { path: "", type: kits }
+    values: { layout: kit }
+exclude: [README.md, LISEZMOI.md]
