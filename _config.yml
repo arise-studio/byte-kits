@@ -6,7 +6,7 @@ url: "https://arise-studio.github.io"
 baseurl: "/byte-kits"
 lang: en
 # Code GoatCounter (sous-domaine <code>.goatcounter.com), vide = aucune mesure
-goatcounter: ""
+goatcounter: "arise-byte"
 collections:
   kits:
     output: true
